@@ -1,7 +1,3 @@
-Certainly! Here's a sample `README.md` for your project:
-
----
-
 # Exoplanet Worker
 
 `exoplanet-worker` is a Spring Boot application designed to efficiently process and update information on exoplanets. The application retrieves all exoplanets from a Redis database and processes them in chunks. Each chunk is asynchronously updated by fetching the latest data from a separate service through an SSH connection. The updated data is then persisted back to Redis.
