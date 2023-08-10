@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exoplanet-worker-deployment
+  labels:
+    app: exoplanet-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exoplanet-worker
+  template:
+    metadata:
+      labels:
+        app: exoplanet-worker
+    spec:
+      containers:
+      - name: exoplanet-worker-container
+        image: exoplanet-worker:latest
+        resources:
+          limits:
+            cpu: "8"
+            memory: "16Gi"
+          requests:
+            cpu: "8"
+            memory: "16Gi"
