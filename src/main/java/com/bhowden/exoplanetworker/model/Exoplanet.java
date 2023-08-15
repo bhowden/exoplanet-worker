@@ -1,4 +1,5 @@
 package com.bhowden.exoplanetworker.model;
+
 import lombok.Data;
 
 @Data
@@ -15,4 +16,8 @@ public class Exoplanet {
     private double unixTime;
     private double distance;
     private double ra;
+    private double declination;
+    private double galacticLongitude;
+    private double galacticLatitude;
+    private int stayAlive;
 }
